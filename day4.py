@@ -71,9 +71,9 @@
 # print("Out of Loop")
 
 #exmaple of continue
-for i in range(1,51):
-    if(i==21):
-        continue
-    if(i%3==0):
-        print(i)
-print("step 21 is skiped")
+# for i in range(1,51):
+#     if(i==21):
+#         continue
+#     if(i%3==0):
+#         print(i)
+# print("step 21 is skiped")

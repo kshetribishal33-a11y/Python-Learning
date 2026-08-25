@@ -1,7 +1,6 @@
 #day 2
 #Type Casting & Type Conversion
 
-
 # This is Type Casting or Explicit Casting
 #str to int
 age="20"

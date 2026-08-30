@@ -1,80 +1,83 @@
-#Mini Project: Student Record Management System
+#Function ==> is a reusable block of code that perform a specific tassk. Function help make program shorter, organized, and easier to maintain.
+# Example:
+# def sum(x,y):
+#     print(x+y)
+# sum(2,5)
 
-students=[]
-student_ids=set()
-student_marks={}
+# def add(a,b):
+#     print("Sum is:", a+b)
+# a=float(input("Enter 1st Num  "))
+# b=float(input("Enter 2nd Num  "))
 
-while True:
-    print("===== Student Record Management System====")
-    print("1. Add Student")
-    print("2. Show All Students")
-    print("3. Search Student by ID")
-    print("4. Show Highest Marks")
-    print("5. Exit")
+# add(a,b)
 
-    choice= input("Enter Your Chice...:")
+#program to print the number is even or odd using function
+# def is_even():
+#     num=int(input("Enter your Number: "))
 
-    if choice=="1":
-        student_id = int(input("Enter Student ID:"))
+#     if num%2==0:
+#         print("Even Number.")
+#     else:
+#         print("Odd Number")
+# is_even()
 
-        if student_id in student_ids:
-            print("Student Already Exists!")
+#Program to check the greater number among 2 number
+# def greater():
+#     a=float(input("Enter 1st num "))
+#     b=float(input("Enter 2nd num "))
 
-        else:
-            name=input("Enter Student Name: ")
-            marks=int(input("Enter Student Marks: "))
+#     if a>b:
+#         print("a is greater.")
+#     else:
+#         print("b is greater.")
 
-            student = (student_id, name, marks)
+# greater()
 
-            students.append(student)
-            student_ids.add(student_id)
-            student_marks[name] = marks
+#Program to print the table of random number
+# def table():
+#     num=int(input("Enter you num: "))
+#     count=1
+#     while count<=10:
+#         print(f"{num} * {count} = ",num*count)
+#         count+=1
+# table()
 
-            print("Student Added Successfully!")
 
-    elif choice=="2":
-        if len(students)==0:
-            print("No student record found.")
-        else:
-            print("Student Records:")
-            for student in students:
-                print(
-                    "ID:", student[0],
-                    "| Name:", student[1],
-                    "| Marks:", student[2]
-                )
 
-    elif choice=="3":
-        search_id = int(input("Enter Student ID to search: "))
+#function to convert celsius to fahrenheit with return value
 
-        found=False
+# def temp_converter():
+#     while True:
+#         print("\n====Temprature Converter=======")
+    
+#         print("1. Celsius to Fahrenheit.")
+#         print("2. Fahrenheit to Celsius.")
+#         print("3. Exit.")
+#         choice=input("Choose what do you want: ")
+#         if choice=="1":
+#             c=float(input("Enter the Celsius value: "))
+#             result= (c*1.8)+32
+#             print(f"{c}°C = {result}°F")
+#         elif choice=="2":
+#             f=float(input("Enter the Fahrenheit value: "))
+#             result= (f-32)/1.8
+#             print(f"{f}°F = {result}°C")
 
-        for student in students:
-            if student[0]==search_id:
-                print("\nStudent Found")
-                print("ID:", student[0])
-                print("Name:", student[1])
-                print("Marks:", student[2])
-                found=True
-                break
-        if not found:
-            print("Student not Found.")
+#         elif choice=="3":
+#             print("Thank You!")
+#             break
 
-    elif choice=="4":
-        if len(student_marks)==0:
-            print("No record availabe")
-        else:
-            highest_marks=max(student_marks.values())
+#         else:
+#             print("Out of Range!!")
 
-            print("\nHighest Marks:", highest_marks)
+# temparture=temp_converter()
 
-            for name, marks in student_marks.items():
-                if marks==highest_marks:
-                    print("Topper:", name)
+#function to find factorial
+def fact():
+    num=int(input("Enter number: "))
+    factorail=1
 
-    elif choice=="5":
-        print("Program Ended.")
-        break
-    else:
-        print("Invalid Choice!")
-         
+    for i in range(1, num+1):
+        factorail=factorail*i
+    print(f"Factorial  {num} is {factorail}")
+fact()
